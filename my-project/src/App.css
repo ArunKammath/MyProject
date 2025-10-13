@@ -76,10 +76,44 @@
   background: lightyellow;
 }
 #testimonials {
-  padding: 40px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   text-align: center;
   background: lightsalmon;
+  section {
+    padding-left: 280px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 100px;
+  }
+}
+#stars {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  img {
+    height: 30px;
+    width: 30px;
+  }
+}
+#about {
+  padding: 20px;
+  text-align: center;
+  background: lightblue;
 }
 #footer {
+  padding-left: 100px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   text-align: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 50px;
+  img {
+    height: 100px;
+    width: 100px;
+  }
 }
