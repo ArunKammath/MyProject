@@ -4,7 +4,12 @@ function App() {
   return (
     <body id="pageLayout">
       <nav id="navigation">
-        <h1>Navigation Bar</h1>
+        <button>Home</button>
+        <button>About</button>
+        <button>Contact</button>
+        <button>Reservations</button>
+        <button>Order online</button>
+        <button>Login</button>
       </nav>
       <header id="heroSection">
         <h1>Hero Section</h1>
