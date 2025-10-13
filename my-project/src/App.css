@@ -5,6 +5,7 @@
   padding: 20px;
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 30px;
   button {
     height: 30px;
@@ -13,15 +14,65 @@
     font-size: 20px;
     font-weight: bold;
   }
+  img {
+    border-radius: 50%;
+    height: 75px;
+    width: 75px;
+  }
 }
 #heroSection {
-  padding: 100px;
-  text-align: center;
+  padding-left: 200px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: left;
   background: lightgreen;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 200px;
+  img {
+    height: 30%;
+    width: 30%;
+  }
+  button {
+    height: 40px;
+    width: 200px;
+    font-size: 20px;
+    border-radius: 5px;
+  }
 }
 #highlights {
-  padding: 40px;
+  padding: 20px;
   text-align: center;
+  heading {
+    padding-left: 200px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 600px;
+    button {
+      height: 40px;
+      width: 150px;
+      font-size: 20px;
+      border-radius: 10px;
+      color: white;
+      background: black;
+    }
+  }
+  section {
+    padding-left: 100px;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 100px;
+    special3 {
+      img {
+        height: 230px;
+        width: 300px;
+      }
+    }
+  }
   background: lightyellow;
 }
 #testimonials {
