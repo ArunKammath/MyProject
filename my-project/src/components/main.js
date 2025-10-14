@@ -4,17 +4,42 @@ import Elanji from "../images/Elanji.jpeg";
 import kaypola from "../images/kaypola.jpeg";
 import ullivada from "../images/ullivada.webp";
 import star from "../images/star.png";
+import { Link } from "react-router-dom";
+
+function HomePage() {
+  return (
+    <div>
+      <HeroSection />
+      <Main />
+      <Testimonials />
+      <About />
+      <Contact />
+    </div>
+  );
+}
 
 function TopNav() {
   return (
     <nav id="navigation">
       <img src={logo} alt="logo" />
-      <button>Home</button>
-      <button>About</button>
-      <button>Contact</button>
-      <button>Reservations</button>
-      <button>Order online</button>
-      <button>Login</button>
+      <Link to="/">
+        <button>Home</button>
+      </Link>
+      <Link to="/about">
+        <button>About</button>
+      </Link>
+      <Link to="/contact">
+        <button>Contact</button>
+      </Link>
+      <Link to="/reservations">
+        <button>Reservations</button>
+      </Link>
+      <Link to="/orderonline">
+        <button>Order online</button>
+      </Link>
+      <Link to="/login">
+        <button>Login</button>
+      </Link>
     </nav>
   );
 }
@@ -114,7 +139,19 @@ function About() {
     </header>
   );
 }
-function Footer() {
+
+function Login() {
+  return <div>Login</div>;
+}
+
+function Reservations() {
+  return <div>Reservations</div>;
+}
+
+function OrderOnline() {
+  return <div>OrderOnline</div>;
+}
+function Contact() {
   return (
     <content id="footer">
       <img src={logo} alt="logo" />
@@ -125,4 +162,5 @@ function Footer() {
     </content>
   );
 }
-export { TopNav, HeroSection, Main, Testimonials, About, Footer };
+
+export { TopNav, HomePage, Login, About, Reservations, OrderOnline, Contact };
