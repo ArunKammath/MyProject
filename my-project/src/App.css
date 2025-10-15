@@ -117,3 +117,15 @@
     width: 100px;
   }
 }
+#reservations {
+  padding-left: 45%;
+  padding-top: 20px;
+  display: grid;
+  max-width: 200px;
+  gap: 20px;
+}
+#res-date {
+  width: 200px;
+  height: 40px;
+  font-size: 16px;
+}

@@ -5,16 +5,17 @@ import kaypola from "../images/kaypola.jpeg";
 import ullivada from "../images/ullivada.webp";
 import star from "../images/star.png";
 import { Link } from "react-router-dom";
+import React from "react";
 
 function HomePage() {
   return (
-    <div>
+    <React.Fragment>
       <HeroSection />
       <Main />
       <Testimonials />
       <About />
       <Contact />
-    </div>
+    </React.Fragment>
   );
 }
 
@@ -145,12 +146,35 @@ function Login() {
 }
 
 function Reservations() {
-  return <div>Reservations</div>;
+  return (
+    <form id="reservations">
+      <label htmlFor="res-date">Choose date</label>
+      <input type="date" id="res-date" />
+      <label htmlFor="res-time">Choose time</label>
+      <select id="res-time ">
+        <option value="17:00">17:00</option>
+        <option value="18:00">18:00</option>
+        <option value="19:00">19:00</option>
+        <option value="20:00">20:00</option>
+        <option value="21:00">21:00</option>
+        <option value="22:00">22:00</option>
+      </select>
+      <label htmlFor="guests">Number of guests</label>
+      <input type="number" placeholder="1" min="1" max="10" id="guests" />
+      <label htmlFor="occasion">Occasion</label>
+      <select id="occasion">
+        <option>Birthday</option>
+        <option>Anniversary</option>
+      </select>
+      <input type="submit" value="Make Your reservation" />
+    </form>
+  );
 }
 
 function OrderOnline() {
   return <div>OrderOnline</div>;
 }
+
 function Contact() {
   return (
     <content id="footer">
