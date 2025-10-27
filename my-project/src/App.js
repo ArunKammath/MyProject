@@ -5,10 +5,10 @@ import {
   HomePage,
   Login,
   About,
-  Reservations,
   OrderOnline,
   Contact,
 } from "./components/main";
+import { Reservations } from "./components/reservation";
 function App() {
   return (
     <body id="pageLayout">
