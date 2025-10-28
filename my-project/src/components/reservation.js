@@ -4,6 +4,7 @@ import "../style/reservation.css";
 
 
 function Reservations() {
+  const [bookingList, setBookingList] = useState([]);
     const [booking, setBooking] = useState({
         date: "",
         time: "",
@@ -17,11 +18,14 @@ function Reservations() {
             ...booking,
             [e.target.name]: value
         });
+       
     };
 
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log("Submitted booking:", booking);
+        setBookingList([...bookingList, booking]);
+        console.log(bookingList);
         // Reset form after submission
         setBooking({
             date: "",
