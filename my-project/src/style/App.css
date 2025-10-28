@@ -71,20 +71,20 @@
   }
   background: lightyellow;
 }
-
-
 #testimonials {
   padding-top: 20px;
   padding-bottom: 20px;
-  text-align: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
   background: lightsalmon;
-  rating {
-    padding-left: 280px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 100px;
-  }
+}
+#rating {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  gap: 5%;
 }
 #stars {
   display: flex;
@@ -115,7 +115,6 @@
     width: 100px;
   }
 }
-
 #reservations {
   padding-top: 20px;
   padding-left: 35%;
@@ -124,14 +123,12 @@
   align-items: left;
   gap: 20px;
 }
-
 #res-date {
   margin-left: 10px;
   width: 200px;
   height: 40px;
   font-size: 16px;
 }
-
 #res-time {
   margin-left: 10px;
   width: 200px;

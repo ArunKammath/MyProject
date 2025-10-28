@@ -11,7 +11,7 @@ function Reservations() {
     });
 
     const handleChange = (e) => {
-      const value = e.target.name == "numGuests" ? Number(e.target.value) : e.target.value;
+      const value = e.target.name === "numGuests" ? Number(e.target.value) : e.target.value;
         setBooking({
             ...booking,
             [e.target.name]: value
