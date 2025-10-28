@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 
 
 
@@ -6,14 +6,15 @@ function Reservations() {
     const [booking, setBooking] = useState({
         date: "",
         time: "",
-        numGuests:"",
+        numGuests:0,
         occasion: "",
     });
 
     const handleChange = (e) => {
+      const value = e.target.name == "numGuests" ? Number(e.target.value) : e.target.value;
         setBooking({
             ...booking,
-            [e.target.name]: e.target.value
+            [e.target.name]: value
         });
     };
 
@@ -24,7 +25,7 @@ function Reservations() {
         setBooking({
             date: "",
             time: "",
-            numGuests:"",
+            numGuests:0,
             occasion: "",
         });
     };
@@ -44,11 +45,11 @@ function Reservations() {
           <option value="22:00">22:00</option>
         </select>
       </label>
-      <label>Number of guests:
-          <input type="number" placeholder="1"/>
+      <label htmlFor="numGuests" style={{ fontSize: "20px"}}>Number of guests:
+        <input type="number" id="guests" name="numGuests" value={booking.numGuests} onInput={handleChange} min={0}/>
       </label>
       <label htmlFor="occasion" style={{ fontSize: "20px" }}>Occasion :  
-        <select id="occasion" name="Celebration" value={booking.occasion} onChange={handleChange}>
+        <select id="occasion" name="occasion" value={booking.occasion} onChange={handleChange}>
           <option value="">Select an occasion</option>
           <option value="Birthday">Birthday</option>
           <option value="Anniversary">Anniversary</option>
