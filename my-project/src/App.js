@@ -1,4 +1,5 @@
-import "./App.css";
+import "./style/App.css";
+import "./style/reservation.css"
 import { Routes, Route } from "react-router-dom";
 import {
   TopNav,
