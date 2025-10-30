@@ -1,10 +1,9 @@
 import React, { useState } from "react";
-import "../style/reservation.css";
-
-
+import "../style/reservation.css"; 
+import { useBooking } from "./booking"; 
 
 function Reservations() {
-  const [bookingList, setBookingList] = useState([]);
+  const {bookingList, setBookingList} = useBooking();
     const [booking, setBooking] = useState({
         date: "",
         time: "",
@@ -34,6 +33,7 @@ function Reservations() {
             occasion: "",
         });
     };
+
   return (
     <form id="reservations" onSubmit={handleSubmit}>
       <label htmlFor="res-date" style={{ fontSize: "20px"}}>Reservation date 
