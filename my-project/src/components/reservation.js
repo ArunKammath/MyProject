@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "../style/reservation.css"; 
 import { useBooking } from "./booking"; 
 
@@ -20,11 +20,14 @@ function Reservations() {
        
     };
 
+    useEffect(() => {
+      console.log(bookingList);
+    }, [bookingList]);
+
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log("Submitted booking:", booking);
         setBookingList([...bookingList, booking]);
-        console.log(bookingList);
         // Reset form after submission
         setBooking({
             date: "",
