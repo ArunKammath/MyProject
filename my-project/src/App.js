@@ -4,7 +4,6 @@ import { Routes, Route } from "react-router-dom";
 import {
   TopNav,
   HomePage,
-  Login,
   About,
   OrderOnline,
   Contact,
@@ -16,7 +15,6 @@ function App() {
       <TopNav />
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/login" element={<Login />} />
         <Route path="/about" element={<About />} />
         <Route path="/reservations" element={<Reservations />} />
         <Route path="/orderonline" element={<OrderOnline />} />

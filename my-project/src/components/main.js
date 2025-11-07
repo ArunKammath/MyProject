@@ -38,9 +38,6 @@ function TopNav() {
       <Link to="/orderonline">
         <button>Order online</button>
       </Link>
-      <Link to="/login">
-        <button>Login</button>
-      </Link>
     </nav>
   );
 }
@@ -141,10 +138,6 @@ function About() {
   );
 }
 
-function Login() {
-  return <div>Login</div>;
-}
-
 function OrderOnline() {
   return <div>OrderOnline</div>;
 }
@@ -161,4 +154,4 @@ function Contact() {
   );
 }
 
-export { TopNav, HomePage, Login, About, OrderOnline, Contact };
+export { TopNav, HomePage, About, OrderOnline, Contact };
