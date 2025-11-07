@@ -1,5 +1,6 @@
 import "./style/App.css";
 import "./style/reservation.css"
+import "./style/onlineMenu.css"
 import { Routes, Route } from "react-router-dom";
 import {
   TopNav,
