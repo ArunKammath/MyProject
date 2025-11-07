@@ -4,11 +4,12 @@ import { useBooking } from "./booking";
 
 function Reservations() {
   const {bookingList, setBookingList} = useBooking();
+  
     const [booking, setBooking] = useState({
         date: "",
         time: "",
         numGuests:0,
-        occasion: "",
+        occasion: ""
     });
 
     const handleChange = (e) => {
@@ -19,10 +20,21 @@ function Reservations() {
         });
        
     };
+    useEffect(() => {
+      if(booking.date !=="" && booking.time !== "" && booking.numGuests !== 0 && booking.occasion !== "") {
+        for(let i = 0; i < bookingList.length; i++) {
+          if(bookingList[i].date === booking.date && bookingList[i].time === booking.time) {
+            alert("No available slots for this time");
+            return;
+          }
+        }
+      }
+    }, [booking]);
 
     useEffect(() => {
       console.log(bookingList);
     }, [bookingList]);
+
 
     const handleSubmit = (e) => {
         e.preventDefault();
