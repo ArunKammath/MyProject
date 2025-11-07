@@ -50,7 +50,9 @@ function HeroSection() {
         <h2>Kochi</h2>
         <p>Authntic Kerala Food with a mix of traditional and modern cuisine</p>
         <p>Open from 10:00 AM to 12:00 pm and 4pm to 10pm</p>
-        <button>Reserve a table</button>
+        <Link to="/reservations"> 
+          <button>Reserve a table</button>
+        </Link>
       </section>
       <img src={snacksImage} alt="snacksImage" />
     </header>
@@ -62,7 +64,9 @@ function Main() {
     <main id="highlights">
       <header>
         <h1>Specials</h1>
+        <Link to="/orderonline">
         <button>Online Menu</button>
+        </Link>
       </header>
       <section id="specials">
         <section id="elanji">
@@ -138,10 +142,6 @@ function About() {
   );
 }
 
-function OrderOnline() {
-  return <div>OrderOnline</div>;
-}
-
 function Contact() {
   return (
     <section id="footer">
@@ -154,4 +154,4 @@ function Contact() {
   );
 }
 
-export { TopNav, HomePage, About, OrderOnline, Contact };
+export { TopNav, HomePage, About, Contact };

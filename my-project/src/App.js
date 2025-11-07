@@ -5,10 +5,10 @@ import {
   TopNav,
   HomePage,
   About,
-  OrderOnline,
   Contact,
 } from "./components/main";
 import { Reservations } from "./components/reservation";
+import { OrderOnline } from "./components/onlineMenu";
 function App() {
   return (
     <body id="pageLayout">
