@@ -7,13 +7,28 @@ import ullivada from "../images/ullivada.webp";
 import tenderCoconut from "../images/tenderCoconut.jpg";
 import bananaHalwa from "../images/bananaHalwa.jpg";
 
+
+function QuantityButton(props){
+    return (
+        <React.Fragment >
+            <section id="quantity">
+                <button onClick={props.handleAdd}>Add</button>
+                <input type="number" placeholder="Quantity" value={props.quantity}/>
+                <button onClick={props.handleRemove}>Remove</button>
+            </section>
+        </React.Fragment>
+        
+    )
+}
 function OrderOnline() {
     const [quantity, setQuantity] = useState(0);
     const handleAdd = () => {
         setQuantity(quantity + 1);
     }
     const handleRemove = () => {
-        setQuantity(quantity - 1);
+        if(quantity > 0){
+            setQuantity(quantity - 1);
+        }
     }
     return (
         <React.Fragment>
@@ -26,11 +41,7 @@ function OrderOnline() {
                         <h1>Tea</h1>
                         <img src={tea} alt="tea" />
                         <h2>Rs. 15.00 </h2>
-                        <section id="quantity">
-                            <button onClick={handleAdd}>Add</button>
-                            <input type="number" placeholder="Quantity" value={quantity} onChange={handleAdd} />
-                            <button onClick={handleRemove}>Remove</button>
-                        </section>
+                        <QuantityButton handleAdd={handleAdd} handleRemove={handleRemove} quantity={quantity} />
                     </section>
                     <section id="coffee">   
                         <h1>Coffee</h1>
