@@ -2,24 +2,81 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
-    padding: 20px;
+    gap: 5%;
+
 }
-#tea {
+#beverageList {
     display: flex;
     flex-direction: row;
-    align-items: center;
     gap: 20%;
-    padding-left: 20%;
-    img {
-        width: 20%;
-        height: 20%;
-    }
+}
+
+#tea {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2%;
 }
 #coffee {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
-    padding-left: 20%;
+    gap: 2%;
+    img {
+        width: 90%;
+        height: 90%;
+    }
 }
+
+#snacks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5%;
+}
+#snacksList {
+    display: flex;
+    flex-direction: row;
+    gap: 20%;
+}
+#elanji {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2%;
+}
+
+#desserts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5%;
+}
+#dessertsList {
+    display: flex;
+    flex-direction: row;
+    gap: 10%;
+}
+#tenderCocnut {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2%;
+    h1 {
+        font-size: 150%;
+    }
+    img {
+        width: 40%;
+        height: 40%;
+    }
+}
+#bananaHalwa {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2%;
+    img {
+        width: 40%;
+        height: 40%;
+    }
+}     
