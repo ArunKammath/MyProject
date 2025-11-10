@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import tea from "../images/tea.webp";
 import coffee from "../images/coffee.avif";
 import Elanji from "../images/Elanji.jpeg";
@@ -8,6 +8,13 @@ import tenderCoconut from "../images/tenderCoconut.jpg";
 import bananaHalwa from "../images/bananaHalwa.jpg";
 
 function OrderOnline() {
+    const [quantity, setQuantity] = useState(0);
+    const handleAdd = () => {
+        setQuantity(quantity + 1);
+    }
+    const handleRemove = () => {
+        setQuantity(quantity - 1);
+    }
     return (
         <React.Fragment>
             <section id="beverages">
@@ -19,6 +26,11 @@ function OrderOnline() {
                         <h1>Tea</h1>
                         <img src={tea} alt="tea" />
                         <h2>Rs. 15.00 </h2>
+                        <section id="quantity">
+                            <button onClick={handleAdd}>Add</button>
+                            <input type="number" placeholder="Quantity" value={quantity} onChange={handleAdd} />
+                            <button onClick={handleRemove}>Remove</button>
+                        </section>
                     </section>
                     <section id="coffee">   
                         <h1>Coffee</h1>

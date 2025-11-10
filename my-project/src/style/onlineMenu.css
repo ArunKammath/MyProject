@@ -16,6 +16,15 @@
     flex-direction: column;
     align-items: center;
     gap: 2%;
+    quantity {
+        display: flex;
+        flex-direction: row;
+        gap: 2%;
+    }
+    input {
+        text-align: center;
+        width: 20%;
+    }
 }
 #coffee {
     display: flex;
